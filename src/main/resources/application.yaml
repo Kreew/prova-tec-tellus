@@ -1,0 +1,12 @@
+spring:
+  application:
+      name: provatecnica
+
+  server:
+    port: 8080
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_DATABASE}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driverClassName: org.postgresql.Driver

@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "4fc48c44-29f7-4527-9245-5ce6b8c7e8e8",
+		"name": "BE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12735232"
+	},
+	"item": [
+		{
+			"name": "Lista Sensori",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sensori",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sensori"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crea nota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titolo\": \"Una nota\",\r\n    \"descrizione\": \"Descrizione\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/note",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elimina nota",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/note/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"note",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggiorna nota",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titolo\": \"Una nota\",\r\n    \"descrizione\": \"Descrizione\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/note/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"note",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dettaglio Sensore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sensori/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sensori",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

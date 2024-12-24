@@ -1,0 +1,28 @@
+services:
+  postgres-db:
+    image: init-postgres
+    environment:
+      - POSTGRES_USER=sa
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=provatecnica
+    networks:
+      - postgres-db-network
+
+  provatecnica-be:
+    image: provatecnica-be
+    ports:
+      - "8080:8080"
+    networks:
+      - postgres-db-network
+    depends_on:
+      - postgres-db
+    environment:
+      DB_HOST: postgres-db
+      DB_PORT: 5432
+      DB_DATABASE: provatecnica
+      DB_USERNAME: sa
+      DB_PASSWORD: password
+
+networks:
+  postgres-db-network:
+    driver: bridge
